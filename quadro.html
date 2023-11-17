@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="quadro.css">
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet"  hrfe="quadro.css">
+    <title>Hall da Fama</title>
+
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo" id="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="logo_interact">
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="quemsomos.html" class="nav-link">Quem Somos</a></li>
+                    <li class="nav-item"><a href="formulario.html" class="nav-link">Faça Parte</a></li>
+                    <li class="nav-item"><a href="quadro.html" class="nav-link">Hall da Fama</a></li>
+                    <li class="nav-item"><a href="projetos_eventos.html" class="nav-link">Projetos/Eventos</a></li>
+                    <li class="nav-item"><a href="doacao.html" class="nav-link">Doação</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+            </div>
+            <div class="login-button">
+                <button><a href="entrar.html">Entrar</a></button>
+            </div>
+    </header>        
+    <div class="gallery">
+        <div class="member">
+            <img src="img/rafa.jpg" alt="Membro 1">
+            <h3>Rafaela Araújo</h3>
+            <p>Presidente 2023-2024</p>
+        </div>
+        <div class="member">
+            <img src="img/mi.jpg" alt="Membro 2">
+            <h3>Millena de Sousa</h3>
+            <p>Vice-Presidente</p>
+            <p>Diretora de Projetos/Eventos</p>
+        </div>
+        <div class="member">
+            <img src="img/l.jpg" alt="Membro 3">
+            <h3>Lorena Portugal</h3>
+            <p>1ª Secretária</p>
+        </div>
+        <div class="member">
+            <img src="img/yv.jpg" alt="Membro 4">
+            <h3>Millena de Sousa</h3>
+            <p>2º Secretário</p>
+            <p>1º Protocolo</p>
+        </div>
+        <div class="member">
+            <img src="img/yuri.jpg" alt="Membro 5">
+            <h3>Yuri Nicolau</h3>
+            <p>1º Tesoureiro</p>
+        </div>
+        <div class="member">
+            <img src="img/cassio.jpg" alt="Membro 6">
+            <h3>Cassio de Castro</h3>
+            <p>2º Tesoureiro</p>
+            <p>2º Protocolo</p>
+        </div>
+        <div class="member">
+            <img src="img/hey.jpg" alt="Membro 7">
+            <h3>Heytor Turuyoshi</h3>
+            <p>Imagem Pública</p>
+        </div>
+        <div class="member">
+            <img src="img/la.jpg" alt="Membro 8">
+            <h3>Lara Portugal</h3>
+            <p>DMQA
+(Desenvolvimento e Manutenção do Quadro Associativo)
+            </p>
+        </div>
+        <div class="member">
+            <img src="img/anderson.jpg" alt="Membro 9">
+            <h3>Anderson Paulo</h3>
+            <p>Pró-Juventude</p>
+        </div>
+        
+    </div>
+    <div class="gallery-controls">
+        <button id="prevBtn">Anterior</button>
+        <button id="nextBtn">Próximo</button>
+    </div>
+    <script>
+        const members = document.querySelectorAll('.member');
+        let currentMember = 0;
+
+        function showMember(index) {
+            members.forEach((member, i) => {
+                if (i === index) {
+                    member.style.display = 'block';
+                } else {
+                    member.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentMember = (currentMember - 1 + members.length) % members.length;
+            showMember(currentMember);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentMember = (currentMember + 1) % members.length;
+            showMember(currentMember);
+        });
+
+        showMember(currentMember);
+    </script>
+     <footer>
+        <div id="footer_copyright">
+            <p>Copyright 2023 - Todos os direitos reservados.  Feito por Arthur Turuyoshi.</p>
+               </div>
+    </footer>
+</body>
+</html>

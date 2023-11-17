@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <script src="formulario.js"></script>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href= https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css/>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo" id="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="logo_interact">
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="quemsomos.html" class="nav-link">Quem Somos</a></li>
+                    <li class="nav-item"><a href="formulario.html" class="nav-link">Faça Parte</a></li>
+                    <li class="nav-item"><a href="quadro.html" class="nav-link">Hall da Fama</a></li>
+                    <li class="nav-item"><a href="projetos_eventos.html" class="nav-link">Projetos/Eventos</a></li>
+                    <li class="nav-item"><a href="doacao.html" class="nav-link">Doação</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+            </div>
+            <div class="login-button">
+                <button><a href="entrar.html">Entrar</a></button>
+            </div>
+    </header> 
+    <br>
+    <br>     
+    <main id="container">
+        <form id="login_form">
+    <h2>Formulário de Inscrição no Interact Club de Guarujá</h2>
+    <hr>    
+    <p>Prencha os dados a baixo:</p>
+    <div class="perfil">
+        <label for="nome_completo">Nome Completo:</label>
+        <input type="text" id="nome_completo" name="nome_completo" size="80" required><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="ddd" name="ddd" placeholder="DDD" maxlength="2" size="2">
+        <span> - </span>
+        <input type="text" id="numero" name="numero" placeholder="Número" maxlength="9" size="10">
+        <br><br>
+
+        <label for="idade">Idade de:(12 a 18 anos):</label>
+        <input type="number" id="idade" name="idade" min="12" max="18" required>
+        <span id="idadeError" style="color: red;"></span>
+        <br>
+        <br>
+        
+        <label for="escolaridade">Escolaridade:</label><br>
+        <input type="radio" id="fundamental" name="escolaridade" value="fundamental" required>
+        <label for="fundamental">Fundamental</label><br>
+        <input type="radio" id="medio" name="escolaridade" value="medio" required>
+        <label for="medio">Médio</label><br>
+        <input type="radio" id="superior" name="escolaridade" value="superior" required>
+        <label for="superior">Superior</label><br>
+        <input type="radio" id="pos_graduacao" name="escolaridade" value="pos_graduacao" required>
+        <label for="pos_graduacao">Pós-graduação</label><br>
+    </div>
+
+    <div class="endereco">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" onblur="buscarEndereco(this.value)"><br><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" size="50" readonly>
+        <label for="numero_endereco">Número:</label>
+        <input type="text" id="numero_endereco" name="numero_endereco" size="10"><br><br>
+
+        <label for="complemento">Complemento:</label><br/>
+        <textarea id="complemento" name="complemento" rows="5" cols="30"></textarea>
+
+        <script>
+            function buscarEndereco(cep) {
+                const url = `https://viacep.com.br/ws/${cep}/json/`;
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.erro) {
+                            alert("CEP não encontrado");
+                        } else {
+                            document.getElementById("endereco").value = `${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Ocorreu um erro na busca do CEP: " + error);
+                    });
+            }
+        </script>
+    </div>
+
+    <div class="motivo">
+        <label for="motivo_interact">Por que deseja entrar no Interact Club de Guarujá?</label> <br/>
+        <textarea id="motivo_interact" name="motivo_interact" rows="10" cols="50"></textarea>
+    </div>
+
+    <div class="soube">
+        <label for="como_soube">Como ficou sabendo sobre nós?</label>
+        <select id="como_soube" name="como_soube" required>
+            <option value="membro">Um de nossos membros</option>
+            <option value="redes_sociais">Redes Sociais</option>
+            <option value="ex_participante">Já fez parte do programa</option>
+            <option value="programa_rotary">Programa do Rotary</option>
+        </select>
+    </div>
+
+       <input type="button" class="submit-button" id="submitBtn" value="Enviar" onclick="enviarFormulario()">
+            <div id="agradecimento" style="display: none;">Obrigado, seu email foi entregue!</div>
+    <script class="enviar_formulario">
+        function enviarFormulario() {
+            // Por enquanto, apenas exibimos a mensagem de agradecimento.
+            document.getElementById("submitBtn").style.display = "none";
+            document.getElementById("agradecimento").style.display = "block";
+        }
+    </script>
+    
+</form>
+    </main>
+</body>
+</html>
+
+            

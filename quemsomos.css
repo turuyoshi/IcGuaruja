@@ -1,0 +1,138 @@
+/* Estilos do logotipo */
+#logo {
+    float: left;
+}
+
+/* Estilos da barra de navegação */
+.nav-bar {
+    background: linear-gradient(to bottom, #050244, #1040d1); /* Gradiente vertical de #333 a #000 */
+    overflow:auto; /* Para conter elementos flutuantes */
+}
+
+/* Estilos da lista de navegação */
+.nav-list {
+    text-align: center; /* Centraliza os links de navegação */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+    margin:  0 10px; /* Espaçamento entre os itens do menu */
+}
+
+.entrar {
+    display: inline;
+    margin-left:auto;
+    margin-top:auto;
+}
+/* Estilos dos links de navegação */
+.nav-link {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilos do botão de login */
+.login-button {
+    float: right; /* Alinha o botão à direita */
+    margin-right: 40px 0px; /* Espaçamento do botão em relação à margem direita */
+}
+
+.login-button button {
+    background-color: #1040d1;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.login-button button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .login-button {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, rgb(25, 82, 111)); /* Cor de fundo degradê */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    width: 80%;
+    max-width: 80rem; /* Defina uma largura máxima para garantir a legibilidade em telas grandes */
+    margin: 0 auto; /* Centraliza o parágrafo */
+    font-size: 20px;
+    text-align: justify;
+}
+
+header h1, main h2, main h3, ul {
+    color: #1040d1; /* Títulos em azul */
+    text-align: center;
+    list-style: none;
+}
+
+.logo-interact {
+    display: block;
+    margin: 0 auto;
+    width: 20%; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção original da imagem */
+}
+
+
+main {
+    text-align: justify; /* Justifica todo o texto dentro do elemento 'main' */
+}
+
+.interact, .rotary {
+    margin: 20px auto; /* Centraliza o conteúdo */
+    padding: 20px;
+    background: white; /* Fundo branco para destacar o conteúdo */
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        width: auto; /* Define a largura do parágrafo como 100% em telas menores */
+    }
+
+    main {
+        padding: 10px; /* Adapta o espaçamento interno do elemento main */
+    }
+
+    .interact, .rotary {
+        max-width: 100%; /* Largura máxima de 100% para .interact e .rotary em telas menores */
+    }
+}

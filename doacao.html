@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Doe para o Interact</title>
+    <link rel="stylesheet" type="text/css" href="doacao.css">
+    <link rel="icon" href="favicon.ico"/>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo" id="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="logo_interact">
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="quemsomos.html" class="nav-link">Quem Somos</a></li>
+                    <li class="nav-item"><a href="formulario.html" class="nav-link">Faça Parte</a></li>
+                    <li class="nav-item"><a href="quadro.html" class="nav-link">Hall da Fama</a></li>
+                    <li class="nav-item"><a href="projetos_eventos.html" class="nav-link">Projetos/Eventos</a></li>
+                    <li class="nav-item"><a href="doacao.html" class="nav-link">Doação</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+            </div>
+            <div class="login-button">
+                <button><a href="entrar.html">Entrar</a></button>
+            </div>
+    </header>     
+    <main>
+    <div class="donation-container">
+        <h1>Faça uma Doação</h1>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="cnpj_cpf">CNPJ/CPF:</label>
+            <input type="text" id="cnpj_cpf" name="cnpj_cpf" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="valor">Valor da Doação:</label>
+            <input type="number" id="valor" name="valor" required>
+        </div>
+        <div class="form-group">
+            <label for="forma-pagamento">Forma de Pagamento:</label>
+            <select id="forma-pagamento" name="forma-pagamento">
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="cartao_debito">Cartão de Débito</option>
+                <option value="boleto">Boleto Bancário</option>
+                <option value="pix">PIX</option>
+            </select>
+        </div>
+        <button class="donate-button" type="submit">Doar Agora</button>
+       </div>
+    </main>
+    <footer>
+        <div id="footer_copyright">
+            &#169
+            2023 Interact Club de Guarujá
+        </div>
+    </footer>
+    
+</body>
+</html>

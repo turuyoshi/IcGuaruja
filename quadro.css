@@ -1,0 +1,145 @@
+/* Estilos do logotipo */
+#logo {
+    float: left;
+}
+
+/* Estilos da barra de navegação */
+.nav-bar {
+    background: linear-gradient(to bottom, #050244, #1040d1); /* Gradiente vertical de #333 a #000 */
+    overflow:auto; /* Para conter elementos flutuantes */
+}
+
+/* Estilos da lista de navegação */
+.nav-list {
+    text-align: center; /* Centraliza os links de navegação */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+    margin:  0 10px; /* Espaçamento entre os itens do menu */
+}
+
+.entrar {
+    display: inline;
+    margin-left:auto;
+    margin-top:auto;
+}
+/* Estilos dos links de navegação */
+.nav-link {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilos do botão de login */
+.login-button {
+    float: right; /* Alinha o botão à direita */
+    margin-right: 40px 0px; /* Espaçamento do botão em relação à margem direita */
+}
+
+.login-button button {
+    background-color: #1040d1;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.login-button button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .login-button {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin: auto; /* Centraliza o conteúdo */
+}
+
+.member img {
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner pai */
+    height: auto; /* A altura será ajustada automaticamente para manter as proporções originais */
+}
+
+.member {
+    text-align: center;
+    margin: 20px;
+    width: 200px; /* Defina a largura desejada */
+    transition: transform 0.5s; /* Adiciona uma transição suave de 0.5 segundos */
+}
+
+.member:hover {
+    transform: scale(1.2); /* Aumenta a escala da imagem em 20% ao passar o mouse */
+}
+
+.gallery-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#prevBtn,
+#nextBtn {
+    background-color: #4c87af;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    background-color: #456fa0;
+}
+@media only screen and (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        margin-top: 10px;
+    }
+
+    .login-button {
+        float: none;
+        margin: 10px 0;
+    }
+
+    .gallery {
+        margin-top: 10px;
+    }
+}

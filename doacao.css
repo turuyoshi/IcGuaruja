@@ -1,0 +1,156 @@
+/* Estilos do logotipo */
+#logo {
+    float: left;
+}
+
+/* Estilos da barra de navegação */
+.nav-bar {
+    background: linear-gradient(to bottom, #050244, #1040d1); /* Gradiente vertical de #333 a #000 */
+    overflow:auto; /* Para conter elementos flutuantes */
+}
+
+/* Estilos da lista de navegação */
+.nav-list {
+    text-align: center; /* Centraliza os links de navegação */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+    margin:  0 10px; /* Espaçamento entre os itens do menu */
+}
+
+.entrar {
+    display: inline;
+    margin-left:auto;
+    margin-top:auto;
+}
+/* Estilos dos links de navegação */
+.nav-link {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilos do botão de login */
+.login-button {
+    float: right; /* Alinha o botão à direita */
+    margin-right: 40px 0px; /* Espaçamento do botão em relação à margem direita */
+}
+
+.login-button button {
+    background-color: #1040d1;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.login-button button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .login-button {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do formulário */
+.donation-container {
+    background-color: #fff;
+    width: 400px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+   
+}
+
+/* Estilos dos campos de formulário */
+.form-group {
+    margin-bottom: 25px;
+    padding: 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos do botão de doação */
+.donate-button {
+    background-color: #4c75af;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate-button:hover {
+    background-color: #4577a0;
+}
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .donation-container {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+    text-align: end;
+}
